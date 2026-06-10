@@ -1,0 +1,91 @@
+@font-face {
+    font-family: "kick";
+    src: url(assets/font/s2.woff);
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: linear-gradient(to bottom, #2f2f2f, #1c1f22);
+    font-family: "kick", sans-serif;
+    min-height: 100vh;
+}
+
+.lb-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.lb-card {
+    background: #26292c;
+    padding: 40px;
+    border-radius: 20px;
+    width: 450px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+.lb-title {
+    font-family: "kick", sans-serif;
+    font-size: 48px;
+    color: white;
+    text-align: center;
+    margin-bottom: 30px;
+    text-decoration: underline;
+    text-decoration-color: #9ee251;
+    text-underline-offset: 8px;
+}
+
+.lb-row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 16px 20px;
+    background: #1c1f22;
+    border: 2px solid #363b3f;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    font-size: 18px;
+    color: white;
+}
+
+.lb-rank {
+    width: 30px;
+    color: #9ee251;
+    font-weight: bold;
+}
+
+.lb-name {
+    flex: 1;
+}
+
+.lb-score {
+    color: #9ee251;
+    font-weight: bold;
+}
+
+.lb-back {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: #888;
+    text-decoration: none;
+    font-family: "kick", sans-serif;
+    font-size: 16px;
+}
+
+.lb-back:hover {
+    color: #9ee251;
+}
+
+.lb-empty {
+    text-align: center;
+    color: white;
+    padding: 30px;
+    font-size: 28px;
+}

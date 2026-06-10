@@ -1,0 +1,113 @@
+@font-face {
+    font-family: "kick";
+    src: url(assets/font/s2.woff);
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #2f2f2f;   
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.2);   
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;    
+    align-items: center;
+}
+
+.card {
+    background: #26292c;         
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+    width: 400px;
+}
+
+.register {
+    font-family: "kick", sans-serif;
+    font-weight: bolder;
+    color: white;
+    margin-bottom: 10px;
+    font-size: 60px;
+    text-align: center;
+}
+
+.h1 {
+    text-decoration: underline;
+    text-decoration-color: #9ee251;
+    text-underline-offset: 5px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    width: 100%;
+}
+
+.input {
+    padding: 14px 18px;
+    border: 3px solid #363b3f;
+    border-radius: 12px;
+    font-size: 16px;
+    outline: none;
+    font-family: "kick", sans-serif;
+    background-color: #1c1f22;   
+    color: white;                 
+    transition: all 0.3s ease;
+}
+
+.input::placeholder {
+    color: rgb(219, 217, 217);                  
+}
+
+.input:focus {
+    border-color: #9ee251;
+}
+
+.btn {
+    padding: 14px;
+    background-color: #15171a;    
+    color: #9ee251;
+    border: none;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: "kick", sans-serif;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #9ee251;
+    color: #1c1f22;
+}
+
+.link {
+    color: #666;
+    text-decoration: underline;
+    font-size: 16px;
+    font-family: "kick", sans-serif;
+    text-align: center;
+    transition: all 0.2s ease;
+}
+
+.link:hover {
+    color: #9ee251;
+}
+
+.error {
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-family: "kick", sans-serif;
+    background-color: #e25151;
+    border-radius: 10px;
+}
