@@ -3,7 +3,7 @@
     include("backend.php");
 
     if (!isset($_SESSION['username'])) {
-        header('Location: login.php');
+        header('Location: ../pop/admin/redirect.php');
         exit;
     }
 
@@ -89,7 +89,7 @@
                         </div>
                         <?php if ($myRole == 1) { ?>
                             <div class="icon-cover" id="admin-dash">
-                                <a href="dashboard.php">
+                                <a href="../pop/admin/panel.php">
                                     <i class="fa-solid fa-user-crown"></i>
                                 </a>
                             </div>
@@ -98,12 +98,18 @@
 
                     <div class="mid">
                         <h1 class="title"><span class="hl">POP</span><span id="hams">HAMS</span></h1>
-                        <span id="user-hi">Hi, <?php echo $_SESSION['username']; ?></span>
+
+                        <?php if ($_SESSION['role'] == 1) { ?>
+                            <span class="admin-hi">Hi, <?php echo $_SESSION['username'] ?>, Welcome Back Admin.</span>
+                        <?php } else { ?>
+                            <span id="user-hi">Hi, <?php echo $_SESSION['username'] ?></span>
+                        <?php } ?>
+
                         <span id="score"><?php echo $myScore; ?></span>
                     </div>
 
                     <div class="right">
-                        <a href="setting.php">
+                        <a href="../pop/pages/setting.php">
                             <div class="right-cover">
                                 <i class="fa-whiteboard fa-semibold fa-gear"></i>
                             </div>

@@ -1,0 +1,132 @@
+@font-face {
+    font-family: "s2";
+    src: url(../assets/font/s2.woff);
+}
+
+*,*::before,*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(to bottom, #2f2f2f, #1c1f22);
+    font-family: "s2", sans-serif;
+    min-height: 100vh;
+}
+
+.auth {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    width: 100%;
+}
+
+.input {
+    padding: 14px 18px;
+    border: 3px solid #363b3f;
+    border-radius: 12px;
+    font-size: 16px;
+    outline: none;
+    font-family: "kick", sans-serif;
+    background-color: #1c1f22;   
+    color: white;                 
+    transition: all 0.3s ease;
+}
+
+.input::placeholder {
+    color: rgb(219, 217, 217);                  
+}
+
+.input:focus {
+    border-color: #9ee251;
+}
+
+.btn {
+    padding: 14px;
+    background-color: #15171a;    
+    color: #9ee251;
+    border: none;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: "kick", sans-serif;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #9ee251;
+    color: #1c1f22;
+}
+
+.link {
+    display: block; 
+    text-align: center;     
+    color: #666;
+    text-decoration: underline;
+    font-size: 20px;
+    font-family: "kick", sans-serif;
+    text-align: center;
+    transition: all 0.2s ease;
+    margin-top: 7px;
+    font-weight: bold;
+}
+
+.link:hover {
+    color: #9ee251;
+}
+
+.logout {
+    background-color: red;
+    margin-top: 10px;
+}
+
+#logout {
+    display: block;         
+    text-align: center;     
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+#logout:hover {
+    background-color: #e25151;
+    color: white;
+}
+
+.title {
+    font-size: 48px;
+    color: white;
+    text-align: center;
+    margin-bottom: 30px;
+    text-decoration: underline;
+    text-decoration-color: #9ee251;
+    text-underline-offset: 8px;
+}
+
+.error {
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-family: "s2", sans-serif;
+    background-color: #e25151;
+    border-radius: 10px;
+}
+
+#user-hi {
+    display: block;
+    color: #888;
+    font-family: "s2", sans-serif;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 20px;
+}

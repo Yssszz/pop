@@ -3,7 +3,7 @@ session_start();
 include "backend.php";
 
 if (!isset($_SESSION['username'])) {
-    header("Location: login.php");
+    header("Location: ../pop/admin/redirect.php");
     exit;
 }
 

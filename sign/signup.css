@@ -1,6 +1,6 @@
 @font-face {
     font-family: "kick";
-    src: url(assets/font/s2.woff);
+    src: url(../assets/font/s2.woff);
 }
 
 *, *::before, *::after {

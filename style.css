@@ -166,3 +166,8 @@ body {
 #hams {
     color: #9ee251;
 }
+
+.admin-hi {
+    color: gold;
+    font-family: "sf", sans-serif;
+}

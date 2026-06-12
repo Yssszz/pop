@@ -2,6 +2,10 @@
 session_start();
 include "backend.php";
 
+if (!isset($_SESSION['username']) || $_POST['skin_id']) {
+    exit;
+}
+
 $username = $_SESSION['username'];
 $skin_id = $_POST['skin_id'];
 

@@ -1,12 +1,11 @@
 <?php
 session_start();
-include "backend.php";
+include("backend.php");
 
 $username = $_SESSION['username'];
 
 $stmt = $db->prepare("UPDATE users SET score = score + 1 WHERE username = ?");
-$stmt->execute([$username]);
-$db->prepare("UPDATE users SET score = score + 1 WHERE username = ?")->execute([$username]);
+$stmt->execute([$username]);    
 
 
 $stmt = $db->prepare("SELECT id, score FROM users WHERE username = ?");

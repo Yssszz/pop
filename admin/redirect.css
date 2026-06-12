@@ -1,0 +1,73 @@
+@font-face {
+    font-family: "kick";
+    src: url(../assets/font/s2.woff);
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: "kick", sans-serif;
+}
+
+.deny-wrap {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    background: linear-gradient(to bottom, #2f2f2f, #1c1f22);
+    font-family: "kick", sans-serif;
+}
+
+.deny-card {
+    background: #26292c;
+    border: 2px solid #363b3f;
+    border-radius: 15px;
+    padding: 50px 40px;
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+}
+
+.deny-code {
+    font-size: 90px;
+    color: #9ee251;
+    line-height: 1;
+}
+
+.deny-msg {
+    font-size: 24px;
+    color: white;
+    text-decoration: underline;
+    text-decoration-color: #9ee251;
+    text-underline-offset: 8px;
+    margin-top: 10px;
+}
+
+.deny-sub {
+    display: block;
+    font-size: 16px;
+    color: #888;
+    margin-top: 16px;
+    margin-bottom: 30px;
+}
+
+.deny-btn {
+    display: inline-block;
+    padding: 12px 28px;
+    background: #9ee251;
+    color: #1c1f22;
+    border-radius: 10px;
+    text-decoration: none;
+    font-family: "kick", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.deny-btn:hover {
+    background: #8ed13f;
+}

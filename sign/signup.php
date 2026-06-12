@@ -1,10 +1,10 @@
 <?php
-$banned = json_decode(file_get_contents("banned.json"), true);
+$banned = json_decode(file_get_contents("../banned.json"), true);
 $error = "";
 $hasBad = false;
 
 if (isset($_POST['submit'])) {
-    include("backend.php");
+    include("../backend.php");
 
     $username = strtolower(trim($_POST['username']));
     $password = $_POST['password'];
@@ -14,7 +14,7 @@ if (isset($_POST['submit'])) {
     } elseif (strlen($username) < 5) {
         $error = "You Need At Least 5 Character For Username..";
     } elseif (strlen($password) < 6) {
-        $error = "You Need At Least 6 Character For Username..";
+        $error = "You Need At Least 6 Character For Password..";
     } else {
         foreach ($banned as $word) {
             if (str_contains($username, $word)) {
@@ -24,7 +24,7 @@ if (isset($_POST['submit'])) {
         }
 
         if ($hasBad) {
-            $error = "Bad Word Detected..";
+            $error = "Bad Words Detected..";
         } else {
             $stmt = $db->prepare("SELECT * FROM users WHERE `username` = ?");
             $stmt->execute([$username]);

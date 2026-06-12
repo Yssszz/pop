@@ -3,7 +3,7 @@ session_start();
 $error = "";
 
 if (isset($_POST['submit'])) {
-    include("backend.php");
+    include("../backend.php");
 
     $username = strtolower(trim($_POST['username']));  
     $password = trim($_POST['password']);
@@ -17,7 +17,8 @@ if (isset($_POST['submit'])) {
 
         if ($user && password_verify($password, $user['password'])) {
             $_SESSION['username'] = $user['username'];
-            header("Location: index.php");
+            $_SESSION['role'] = $user['role'];
+            header("Location: ../index.php");
             exit();
         } else {
             $error = "Username Or Password Error..";

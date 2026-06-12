@@ -1,0 +1,68 @@
+@font-face {
+    font-family: "kick";
+    src: url(../assets/font/s2.woff);
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.panel-wrap {
+    min-height: 100vh;
+    padding: 40px;
+    background: linear-gradient(to bottom, #2f2f2f, #1c1f22);
+    font-family: "kick", sans-serif;
+    color: white;
+}
+
+.panel-title {
+    font-size: 48px;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color: #9ee251;
+    text-underline-offset: 8px;
+    margin-bottom: 30px;
+}
+
+.user-table {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background: #26292c;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.user-table th {
+    background: #9ee251;
+    color: #1c1f22;
+    padding: 14px;
+    font-size: 16px;
+}
+
+.user-table td {
+    padding: 14px;
+    text-align: center;
+    border-bottom: 1px solid #363b3f;
+    font-size: 15px;
+}
+
+.user-table tr:hover td {
+    background: #2f3438;
+}
+
+.panel-back {
+    display: block;
+    text-align: center;
+    margin-top: 30px;
+    color: #888;
+    text-decoration: none;
+    font-family: "kick", sans-serif;
+}
+
+.panel-back:hover {
+    color: #9ee251;
+}
