@@ -1,4 +1,11 @@
 <?php
+session_start();
+
+if (!isset($_SESSION['username']) || $_SESSION['role'] != 1) {
+    header("Location: redirect.php");
+    exit;
+}
+
 $banned = json_decode(file_get_contents("../banned.json"), true);
 $error = "";
 $hasBad = false;
@@ -37,7 +44,7 @@ if (isset($_POST['submit'])) {
                 $stmt = $db->prepare("INSERT INTO users (`username`, `password`) VALUES (?, ?)");
                 $stmt->execute([$username, $hash]);
 
-                header("Location: login.php");
+                header("Location: panel.php");
                 exit();
             }
         }
@@ -51,14 +58,14 @@ if (isset($_POST['submit'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="signup.css">
-    <title>Register</title>
+    <link rel="stylesheet" href="add-user.css">
+    <title>Add Users</title>
 </head>
 
 <body>
     <div class="overlay">
         <div class="card">
-            <h1 class="register"><span class="h1">RE</span>GISTER</h1>
+            <h1 class="register"><span class="h1">Add</span> Users</h1>
 
             <?php if ($error != "") { ?>
                 <p class="error"><?php echo $error; ?></p>
@@ -67,9 +74,9 @@ if (isset($_POST['submit'])) {
             <form method="post" class="form">
                 <input type="text" name="username" placeholder="Username" class="input">
                 <input type="password" name="password" placeholder="Password" class="input">
-                <button type="submit" name="submit" class="btn">REGISTER</button>
-                <a href="login.php" class="link">
-                    Already Have An account? Login
+                <button type="submit" name="submit" class="btn">Add Users</button>
+                <a href="panel.php" class="link">
+                    Back To Admin Panel
                 </a>
             </form>
         </div>

@@ -17,14 +17,44 @@
     color: white;
 }
 
+.panel-header {
+    display: flex;
+    justify-content: space-between;  
+    align-items: center;             
+    max-width: 800px;                
+    margin: 0 auto 20px;             
+}
+
 .panel-title {
     font-size: 48px;
-    text-align: center;
     text-decoration: underline;
     text-decoration-color: #9ee251;
     text-underline-offset: 8px;
-    margin-bottom: 30px;
 }
+
+.panel-button {
+    padding: 10px 20px;
+    background: #9ee251;
+    color: #1c1f22;
+    border: none;
+    border-radius: 10px;
+    font-family: "kick", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;      
+    display: inline-block;
+}
+
+.panel-button:hover {
+    background: #8ed13f;
+}
+
+.del-cell {
+    background-color: red;
+    cursor: pointer;
+}
+
 
 .user-table {
     width: 100%;
@@ -65,4 +95,16 @@
 
 .panel-back:hover {
     color: #9ee251;
+}
+
+.error {
+    text-align: center;
+    color: #ff5555;
+    margin-top: 15px;
+    font-family: "kick", sans-serif;
+}
+
+.header-second {
+    display: flex;
+    gap: 20px;  
 }

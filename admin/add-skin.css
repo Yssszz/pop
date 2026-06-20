@@ -1,0 +1,115 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.panel-wrap {
+    min-height: 100vh;
+    padding: 40px;
+    background: linear-gradient(to bottom, #2f2f2f, #1c1f22);
+    font-family: "kick", sans-serif;
+    color: white;
+}
+
+.panel-title {
+    font-size: 48px;
+    text-decoration: underline;
+    text-decoration-color: #9ee251;
+    text-underline-offset: 8px;
+    text-align: center;
+}
+
+.panel-back {
+    display: block;
+    text-align: center;
+    margin-top: 30px;
+    color: #888;
+    text-decoration: none;
+    font-family: "kick", sans-serif;
+}
+
+
+.skin-form {
+    max-width: 800px;         
+    margin: 0 auto;            
+    display: flex;
+    flex-direction: column;   
+    gap: 18px;               
+    background: #26292c;      
+    padding: 30px;
+    border-radius: 15px;
+}
+
+
+.skin-form input {
+    padding: 14px;
+    background: #1c1f22;       
+    border: 1px solid #363b3f; 
+    border-radius: 10px;
+    color: white;
+    font-family: "kick", sans-serif;
+    font-size: 15px;
+}
+
+
+.skin-form input:focus {
+    outline: none;            
+    border-color: #9ee251;    
+}
+
+.skin-form input::placeholder {
+    color: #888;
+}
+
+.skin-form .panel-button {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.panel-button {
+    padding: 10px 20px;
+    background: #9ee251;
+    color: #1c1f22;
+    border: none;
+    border-radius: 10px;
+    font-family: "kick", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;      
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.panel-button:hover {
+    background: #8ed13f;
+}
+
+.error {
+    max-width: 800px;
+    margin: 0 auto 18px;
+    padding: 14px;
+    background: rgba(255, 85, 85, 0.15);   
+    border: 1px solid #ff5555;             
+    border-radius: 10px;
+    color: #ff5555;                        
+    text-align: center;
+    font-family: "kick", sans-serif;
+    font-size: 15px;
+}
+
+.done {
+    max-width: 800px;
+    margin: 0 auto 18px;
+    padding: 14px;
+    background: rgba(158, 226, 81, 0.15);  
+    border: 1px solid #9ee251;             
+    border-radius: 10px;
+    color: #9ee251;                      
+    text-align: center;
+    font-family: "kick", sans-serif;
+    font-size: 15px;
+}

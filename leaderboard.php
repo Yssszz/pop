@@ -7,7 +7,8 @@ if (!isset($_SESSION['username'])) {
     exit;
 }
 
-$stmt = $db->query("SELECT `username`, `score` FROM users ORDER BY score DESC");
+// 只take大于0的分数
+$stmt =$db->query("SELECT `username`, `score` FROM users WHERE score > 0 ORDER BY score DESC");
 $players = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 

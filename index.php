@@ -11,7 +11,7 @@
     $stmt = $db->prepare("
     SELECT users.score, users.role, skins.image, skins.image_open 
     FROM users 
-    JOIN skins ON users.current_skin = skins.id 
+    LEFT JOIN skins ON users.current_skin = skins.id
     WHERE users.username = ?
     ");
     $stmt->execute([$username]);
@@ -78,7 +78,7 @@
                 <div class="top">
                     <div class="left">
                         <div class="icon-cover">
-                            <a href="shop.php">
+                            <a href="shop2.php">
                                 <i class="fa-solid fa-shop"></i>
                             </a>
                         </div>

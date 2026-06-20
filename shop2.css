@@ -43,14 +43,14 @@
 }
 
 .card {
-    background: #26292c;            /* 卡的底色（深灰）*/
-    border: 2px solid #363b3f;      /* 边框 */
-    border-radius: 15px;            /* 圆角 */
-    padding: 20px;                  /* 卡内留白：内容不贴边 */
-    display: flex;                  /* 卡【里面】也用 flex... */
-    flex-direction: column;         /* ...竖着排：图片→名字→按钮 由上到下 */
-    align-items: center;            /* 里面的东西水平居中 */
-    gap: 12px;                      /* 图片、名字、按钮之间的间距 */
+    background: #26292c;            
+    border: 2px solid #363b3f;      
+    border-radius: 15px;           
+    padding: 20px;                  
+    display: flex;                  
+    flex-direction: column;         
+    align-items: center;            
+    gap: 12px;                     
 }
 
 .skin-img {
@@ -65,18 +65,18 @@
 }
 
 .btn {
-    width: 100%;                /* 按钮撑满卡的宽度 */
+    width: 100%;                
     padding: 10px 20px;
-    background: #9ee251;        /* 绿色 */
+    background: #9ee251;       
     color: #1c1f22;
     border: none;
     border-radius: 10px;
     font-weight: bold;
-    cursor: pointer;            /* 鼠标移上去变小手 */
+    cursor: pointer;            
 }
 
 .btn:hover {
-    background: #8ed13f;        /* 移上去变深一点的绿 */
+    background: #8ed13f;     
 }
 
 .skin-locked {
@@ -88,24 +88,24 @@
     text-align: center;
 }
 
-/* 整个滚动条的宽度 */
+/* scroll的宽度 */
 .grid::-webkit-scrollbar {
     width: 8px;
 }
 
-/* 滚动条的"轨道"（背景那条凹槽） */
+/* scroll的轨道*/
 .grid::-webkit-scrollbar-track {
     background: #1c1f22;
     border-radius: 10px;
 }
 
-/* 滚动条的"滑块"（你拖动的那块） */
+/* scroll的滑块 */
 .grid::-webkit-scrollbar-thumb {
     background: #9ee251;
     border-radius: 10px;
 }
 
-/* 鼠标移到滑块上时 */
+/* mouse移到滑块上的时候 */
 .grid::-webkit-scrollbar-thumb:hover {
     background: #8ed13f;
 }
@@ -114,4 +114,14 @@
     margin-top: 20px;
     color: #888;
     text-decoration: none;
+}
+
+/* skin use */
+.skin-using {
+    width: 100%;
+    padding: 10px;
+    color: #9ee251;
+    border: 2px solid #9ee251;
+    border-radius: 10px;
+    text-align: center;
 }

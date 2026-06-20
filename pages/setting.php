@@ -14,7 +14,7 @@ $username = $_SESSION['username'];
 if (isset($_POST['rename'])) {
     include("../backend.php");
     $new = strtolower(trim($_POST['new_username']));
-    $old = $_SESSION['username'];
+    $old = $username;
 
     if ($new == "") {
         $error = "You Need To Type Something..";
